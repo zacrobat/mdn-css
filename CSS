@@ -1,0 +1,38 @@
+* For styles in the cascade, author stylesheets have priority, then reader stylesheets, then the browser's defaults.
+* For inherited styles, a child node's own style has priority over style inherited from its parent.
+* !important - https://css-tricks.com/when-using-important-is-the-right-choice/
+* CSS Selectors:
+		strong {
+  		color: red;
+		}
+	The part inside the curly braces is the declaration.
+	The keyword color is a property, and red is a value.
+	The semicolon after the property-value pair separates it from other property-value pairs in the same declaration.
+	This tutorial refers to a selector like strong as a tag selector. The CSS Specification refers to it as a type selector.
+* Attribute Selectors
+You can specify other attributes by using square brackets like [type='button']. Inside the brackets you put the attribute name, optionally followed by a matching operator and a value. Additionally, matching can be made case-insensitive by appending an " i" after the value, but not many browsers support this feature yet. https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors
+* Pseudo-classes selectors
+A CSS pseudo-class is a keyword added to selectors that specifies a special state of the element to be selected. For example :hover will apply a style when the user hovers over the element specified by the selector.
+if the stylesheet has conflicting rules and they are equally specific, then CSS gives priority to the rule that is later in the stylesheet.
+When you have a problem with conflicting rules, try to resolve it by making one of the rules more specific, so that it has priority. If you cannot do that, try moving one of the rules nearer the end of the stylesheet so that it has priority.
+* Selectors
+Basic Selectors
+Type selectors elementname
+Class selectors .classname
+ID selectors #idname
+Universal selectors * ns|* *|*
+Attribute selectors [attr=value]
+Combinators
+Adjacent sibling selectors A + B
+General sibling selectors A ~ B
+Child selectors A > B
+Descendant selectors A B
+Pseudo-elements
+Pseudo-classes
+* https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+Selector Types
+* The following list of selector types is by increasing specificity:
+Type selectors (e.g., h1) and pseudo-elements (e.g., :before).
+Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+ID selectors (e.g., #example).
+* Universal selector (*), combinators (+, >, ~, ' ') and negation pseudo-class (:not()) have no effect on specificity. (The selectors declared inside :not() do, however.)
